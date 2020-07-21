@@ -19,23 +19,23 @@ public:
 };
 class ConcreteDecoratorA: public Decorator{
 private:
-    Component* _component;
+    Component* component;
     void AddBehavior() override {cout<<"Behavior A"<<endl;}
 public:
-    ConcreteDecoratorA(Component* c): _component(c){}
+    ConcreteDecoratorA(Component* c): component(c){}
     void Operation() override {
-        _component->Operation();
+        component->Operation();
         AddBehavior();
     }
 };
 class ConcreteDecoratorB: public Decorator{
 private:
-    Component* _component;
+    Component* component;
     void AddBehavior() override{cout<<"Behavior B"<<endl;}
 public:
-    ConcreteDecoratorB(Component* c): _component(c){}
+    ConcreteDecoratorB(Component* c): component(c){}
     void Operation() override {
-        _component->Operation();
+        component->Operation();
         AddBehavior();
     }
 };
